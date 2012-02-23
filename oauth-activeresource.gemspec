@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = OauthActiveResource::VERSION
   s.authors     = ["Alberto Pastor"]
   s.email       = ["albert.pastor@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/albertopq/oauth-activeresource"
   s.summary     = "Rails gem that allows you to easily interact with an Oauth secured rest API with the ActiveResource model."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
