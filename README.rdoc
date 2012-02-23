@@ -19,9 +19,9 @@ Assuming that you are using oauth gem:
 3. Set a before_filter in your controllers to override your connection object with your access_token object
 
     def set_oauth
-      MyModel.oauth_connection = session[:request_token].get_access_token( :oauth_verifier => params[:oauth_verifier] )
+      MyModel.oauth_connection = @access_token
     end
 
-Where session[:request_token] is your OAuth::Consumer and params[:oauth_verifier] the parameters that the authorizer is sending to your callback method.
+Where @access_token is the final object that the oauth gem uses to sign every request. More info about how to create that object here (http://oauth.rubyforge.org/) 
 
 
