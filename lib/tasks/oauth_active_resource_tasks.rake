@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :oauth_active_resource do
+# task :oauth-activeresource do
 #   # Task goes here
 # end

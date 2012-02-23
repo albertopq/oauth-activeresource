@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require 'rails/all'
 
 Bundler.require
-require "oauth_active_resource"
+require "oauth-activeresource"
 
 module Dummy
   class Application < Rails::Application
