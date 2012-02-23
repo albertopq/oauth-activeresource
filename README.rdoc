@@ -14,13 +14,13 @@ Assuming that you are using oauth gem:
 2. Make your models inherit from OauthActiveResource instead ActiveResource
 
     class MyModel < OauthActiveResource::Base
-		end
+    end
 
 3. Set a before_filter in your controllers to override your connection object with your access_token object
 
-  def set_oauth
-    MyModel.oauth_connection = session[:request_token].get_access_token( :oauth_verifier => params[:oauth_verifier] )
-  end
+    def set_oauth
+      MyModel.oauth_connection = session[:request_token].get_access_token( :oauth_verifier => params[:oauth_verifier] )
+    end
 
 Where session[:request_token] is your OAuth::Consumer and params[:oauth_verifier] the parameters that the authorizer is sending to your callback method.
 
