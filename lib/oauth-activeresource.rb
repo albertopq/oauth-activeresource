@@ -1,3 +1,5 @@
+require "active_resource"
+
 module OauthActiveResource
   class Base < ActiveResource::Base
     
