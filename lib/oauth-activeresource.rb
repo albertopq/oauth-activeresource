@@ -39,7 +39,6 @@ module OauthActiveResource
       if @oauth_connection == nil
         super(method, path, *arguments)
       else
-        path = "#{site.scheme}://#{site.host}:#{site.port}#{path}"
         response = @oauth_connection.send(method, path, *arguments)
         handle_response(response)
       end
