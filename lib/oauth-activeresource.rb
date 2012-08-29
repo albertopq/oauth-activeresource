@@ -1,18 +1,18 @@
 module OauthActiveResource
   class Base < ActiveResource::Base
     
-    @@oauth_connection = nil
+    @oauth_connection = nil
     
     def self.oauth_connection= connection
-      @@oauth_connection = connection
+      @oauth_connection = connection
     end
         
     def self.oauth_connection
-      @@oauth_connection
+      @oauth_connection
     end
     
     def self.connection(refresh = false)
-      @connection = Connection.new(@@oauth_connection, site,format) if @connection.nil? || refresh
+      @connection = Connection.new(@oauth_connection, site,format) if @connection.nil? || refresh
       @connection.timeout = timeout if timeout
       return @connection
     end
